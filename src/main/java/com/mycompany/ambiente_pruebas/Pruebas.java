@@ -2,6 +2,7 @@ package com.mycompany.ambiente_pruebas;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -10,26 +11,97 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * @author Karina Madrigal
  */
 public class Pruebas {
-    
-    public static void main(String[] args){
-        String url = "https://www.nacion.com/gnfactory/especiales/2020/landing/index.html?utm_source=home&utm_medium=button&utm_campaign=suscribase_footer_ln";
-        
+
+    public static void main(String[] args) {
+
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Usuario\\Documents\\Sistemas\\2022\\Cuatri III\\Calidad Software\\Proyecto\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
+
+//        //INICIO CASO DE PRUEBA 3
+//        //Boton de inicio
+//        //Precondicion: Ingresar a un periodico digital
+//        String url3 = "https://www.nacion.com/economia/finanzas/cual-entidad-financiera-paga-las-tasas-mas-altas/XRAWRVFASFAI3GCXGPSD3Q2PDY/story/";
+//        String xpath3 = "//*[@id=\"main-nav\"]/div[1]/div[2]/a";
+//
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        driver.get(url3);
+//
+//        try {
+//            //Ponemos a "Dormir" el programa durante los ms que queremos
+//            Thread.sleep(15 * 1000);
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//
+//        //Da click al boton de inicio desde periodico digital
+//        driver.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+//        driver.findElement(By.xpath(xpath3)).click();
+//        
+//        //FIN CASO DE PRUEBA 3
+
+
+        //Caso de prueba 4
+        //Abrir calendario
         
+        
+        //INICIO CASO DE PRUEBA 10
+        //Mostrar beneficios
+        //Precondicion: Ingresar a la página
+        String url10 = "https://www.nacion.com/";
+        String xpath10_Benef = "//*[@id=\"main-nav\"]/div[1]/nav/span[1]/a";
+        String xpath10_VerMas = "//*[@id=\"main\"]/div/div[2]/div/div[13]/div[6]/button";
+        
+        //Ultimas Noticias
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver.get(url);
+        driver.get(url10);
+        try {
+            //Ponemos a "Dormir" el programa durante los ms que queremos
+            Thread.sleep(15 * 1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        //Da click al elemento correspondiente
+        driver.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+        driver.findElement(By.xpath(xpath10_Benef)).click();
         
-        driver.findElement(By.id("name")).sendKeys("Nombre");
-        driver.findElement(By.id("idCard")).sendKeys("123456789");
-//        driver.findElement(By.xpath("//*[@id=\'contact-subs-form\']/div[3]/div")).click();
-//        driver.findElement(By.xpath("/html/body/div[4]/div[1]/section[4]/div/form/div[3]/div/div[3]/div/ul/li[3]")).click();
-        driver.findElement(By.id("email")).sendKeys("prueba@prueba.com");
-        driver.findElement(By.id("phone")).sendKeys("11112222");
-        driver.findElement(By.xpath("//*[@id=\'contact-subs-form\']/div[6]/label/span[1]")).click();
-        driver.findElement(By.xpath("/html/body/div[4]/div[1]/section[4]/div/form/div[6]/label/span[1]")).click();
+        try {
+            //Ponemos a "Dormir" el programa durante los ms que queremos
+            Thread.sleep(5 * 1000);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        driver.findElement(By.xpath(xpath10_VerMas)).click();
+        
+       
+        
+        //FIN CASO DE PRUEBA 9
         
         
+//        //INICIO CASO DE PRUEBA 13
+//        //Búsqueda por texto
+//        //Precondicion: Ingresar a la página
+//        String url13 = "https://www.nacion.com/";
+//        String xpath13_sr = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/button";
+//        String xpath13_type = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/input";
+//        
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+//        driver.get(url11);
+//        
+//        try {
+//            //Ponemos a "Dormir" el programa durante los ms que queremos
+//            Thread.sleep(15 * 1000);
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//        
+//        //Da click al elemento correspondiente
+//        driver.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+//        driver.findElement(By.xpath(xpath11_sr)).click();
+//        driver.findElement(By.xpath(xpath11_type)).sendKeys("Sucesos");
+//        driver.findElement(By.xpath(xpath11_type)).sendKeys(Keys.ENTER);
+//        
+//        //FIN CASO DE PRUEBA 13
     }
 
 }
