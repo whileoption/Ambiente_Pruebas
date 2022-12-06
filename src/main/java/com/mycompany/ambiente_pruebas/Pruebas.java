@@ -19,7 +19,6 @@ public class Pruebas {
 
         //INICIO CASO DE PRUEBA 3
         //Boton de inicio
-        //Precondicion: Ingresar a un periodico digital
         
         WebDriver driver3 = new ChromeDriver();
         
@@ -30,7 +29,6 @@ public class Pruebas {
         driver3.get(url3);
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(15 * 1000);
         } catch (Exception e) {
             System.out.println(e);
@@ -44,7 +42,6 @@ public class Pruebas {
         driver3.findElement(By.xpath(xpath3)).click();
         
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(3 * 1000);
         } catch (Exception e) {
             System.out.println(e);
@@ -53,118 +50,109 @@ public class Pruebas {
         //FIN CASO DE PRUEBA 3
         
         
-        //INICIO CASO DE PRUEBA 8
+        //INICIO CASO DE PRUEBA 6
         //Mostrar notificaciones
         
-        WebDriver driver8 = new ChromeDriver();
+        WebDriver driver6 = new ChromeDriver();
         
-        String url8 = "https://www.nacion.com/";
+        String url6 = "https://www.nacion.com/";
         String xpath_Notif = "//*[@id=\"main-nav\"]/div[1]/div[3]/div[2]/div[1]/div/div/div/button";
         String xpath_Enlace = "//*[@id=\"vf-feed__panel_4\"]/div/div/section[2]/ol/li[1]/a/div[2]/div[3]/p[1]";
 
-        driver8.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver8.get(url8);
+        driver6.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver6.get(url6);
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(15 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
 
         try {
-            driver8.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+            driver6.findElement(By.id("onesignal-slidedown-cancel-button")).click();
         } catch (Exception x) {
             System.out.println(x.getMessage());
         }
 
-        driver8.findElement(By.xpath(xpath_Notif)).click();
+        driver6.findElement(By.xpath(xpath_Notif)).click();
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(2 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
 
-        driver8.findElement(By.xpath(xpath_Enlace)).click();
+        driver6.findElement(By.xpath(xpath_Enlace)).click();
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(3 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
-        driver8.quit();
+        driver6.quit();
 
-        //FIN CASO DE PRUEBA 8
+        //FIN CASO DE PRUEBA 6
         
         
-        //INICIO CASO DE PRUEBA 10
+        //INICIO CASO DE PRUEBA 8
         //Mostrar beneficios
-        //Precondicion: Ingresar a la página
         
-        WebDriver driver10 = new ChromeDriver();
+        WebDriver driver8 = new ChromeDriver();
         
-        String url10 = "https://www.nacion.com/";
-        String xpath10_Benef = "//*[@id=\"main-nav\"]/div[1]/nav/span[1]/a";
-        String xpath10_VerMas = "//*[@id=\"main\"]/div/div[2]/div/div[13]/div[6]/button";
+        String url8 = "https://www.nacion.com/";
+        String xpath8_Benef = "//*[@id=\"main-nav\"]/div[1]/nav/span[1]/a";
+        String xpath8_VerMas = "//*[@id=\"main\"]/div/div[2]/div/div[13]/div[6]/button";
         
         //Ultimas Noticias
-        driver10.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver10.get(url10);
+        driver8.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver8.get(url8);
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(15 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
         //Da click al elemento correspondiente
         try {
-            driver10.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+            driver8.findElement(By.id("onesignal-slidedown-cancel-button")).click();
         } catch (Exception x) {
             System.out.println(x.getMessage());
         }
         
-        driver10.findElement(By.xpath(xpath10_Benef)).click();
+        driver8.findElement(By.xpath(xpath8_Benef)).click();
         
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(5 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
         
-        driver10.findElement(By.xpath(xpath10_VerMas)).click();
+        driver8.findElement(By.xpath(xpath8_VerMas)).click();
         
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(3 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
-        driver10.quit();
+        driver8.quit();
         
         
-        //FIN CASO DE PRUEBA 10
+        //FIN CASO DE PRUEBA 8
         
         
-        //INICIO CASO DE PRUEBA 13
+        //INICIO CASO DE PRUEBA 11
         //Búsqueda por texto
-        //Precondicion: Ingresar a la página
         
-        WebDriver driver13 = new ChromeDriver();
+        WebDriver driver11 = new ChromeDriver();
         
-        String url13 = "https://www.nacion.com/";
-        String xpath13_sr = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/button";
-        String xpath13_type = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/input";
+        String url11 = "https://www.nacion.com/";
+        String xpath11_sr = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/button";
+        String xpath11_type = "//*[@id=\"main-nav\"]/div[1]/div[1]/div[2]/div[1]/div/input";
         
-        driver13.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        driver13.get(url13);
+        driver11.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        driver11.get(url11);
         
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(15 * 1000);
         } catch (Exception e) {
             System.out.println(e);
@@ -172,25 +160,24 @@ public class Pruebas {
         
         //Da click al elemento correspondiente
         try {
-            driver13.findElement(By.id("onesignal-slidedown-cancel-button")).click();
+            driver11.findElement(By.id("onesignal-slidedown-cancel-button")).click();
         } catch (Exception x) {
             System.out.println(x.getMessage());
         }
         
-        driver13.findElement(By.xpath(xpath13_sr)).click();
-        driver13.findElement(By.xpath(xpath13_type)).sendKeys("Costa Rica");
-        driver13.findElement(By.xpath(xpath13_type)).sendKeys(Keys.ENTER);
+        driver11.findElement(By.xpath(xpath11_sr)).click();
+        driver11.findElement(By.xpath(xpath11_type)).sendKeys("Costa Rica");
+        driver11.findElement(By.xpath(xpath11_type)).sendKeys(Keys.ENTER);
         
 
         try {
-            //Ponemos a "Dormir" el programa durante los ms que queremos
             Thread.sleep(3 * 1000);
         } catch (Exception e) {
             System.out.println(e);
         }
-        driver13.quit();
+        driver11.quit();
         
-        //FIN CASO DE PRUEBA 13
+        //FIN CASO DE PRUEBA 11
     }
 
 }
